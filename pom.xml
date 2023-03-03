@@ -19,26 +19,40 @@
         <spring-cloud.version>2020.0.3</spring-cloud.version>
     </properties>
 
+    <!-- libreria usuario commons -->
     <dependencies>
+        <dependency>
+            <groupId>com.formacionbdi.springboot.app.usuarios.commons</groupId>
+            <artifactId>springboot-servicio-usuarios-commons</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!-- Api que nos facilita el trabajo con Hibernate y JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+
+        <!-- Aplicacion web con servidor envebido tomcat-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!-- Dependencia para hacer que el microservicio sea un cliente -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-
+        <!-- Actualiza de manera automatica los cambios sin necesidad de reiniciar el despliqegue-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
+        <!-- Base de datos en memoria -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -54,12 +68,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
-        </dependency>
-        <!-- libreria usuario commons -->
-        <dependency>
-            <groupId>com.formacionbdi.springboot.app.usuarios.commons</groupId>
-            <artifactId>springboot-servicio-usuarios-commons</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
